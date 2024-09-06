@@ -1,0 +1,297 @@
+{% include 'header.html' %}
+
+        <!--- memanggil sidebar -->
+        {% include 'navbar.html' %}
+
+
+                <!-- Panggil Topbar-->
+                {% include 'sidebar.html'%}
+
+                <div class="main-panel">
+                    <div class="content">
+                        <div class="page-inner">
+
+                            <form action="\" method="post">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-title">
+                                                    Klasifikasi KNN
+                                                </div>
+                                            </div>
+
+                                            <!-- isi 1 -->
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label for="Checking Account">Checking Account</label>
+                                                            <select class="form-control" id="Checking Account" name="Checking Account">
+                                                                <option value="0">0 Dm</option>
+                                                                <option value="1">0-200 Dm</option>
+                                                                <option value="2">>200 Dm</option>
+                                                                <option value="3">No Checking Account</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Duration">Duration</label>
+                                                            <input type="number" min="1" class="form-control" placeholder="Duration" name="Duration">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Credit History">Credit History</label>
+                                                            <select class="form-control" id="Credit History" name="Credit History">
+                                                                <option value="0">no credits taken</option>
+                                                                <option value="1">all credits at this bank paid back duly</option>
+                                                                <option value="2">existing credits paid back duly till now</option>
+                                                                <option value="3">delay in paying off in the past</option>
+                                                                <option value="4">critical account/
+                                                                    other credits existing (not at this bank)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Purpose">Purpose</label>
+                                                            <select class="form-control" id="Purpose" name="Purpose">
+                                                                <option value="0">car (new)</option>
+                                                                <option value="1">car (used)</option>
+                                                                <option value="2">furniture/equipment</option>
+                                                                <option value="3">radio/television</option>
+                                                                <option value="4">domestic appliances</option>
+                                                                <option value="5">repairs</option>
+                                                                <option value="6">education</option>
+                                                                <option value="7">vacation/trip</option>
+                                                                <option value="8">retraining</option>
+                                                                <option value="9">business</option>
+                                                                <option value="10">others</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Credit Amount">Credit Amount</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">$</span>
+                                                                </div>
+                                                                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="Credit Amount">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label for="Savings Account">Savings Account</label>
+                                                            <select class="form-control" id="Savings Account" name="Savings Account">
+                                                                <option value="0">100 Dm</option>
+                                                                <option value="1">100 - 500 Dm</option>
+                                                                <option value="2">500 - 1000 Dm</option>
+                                                                <option value="3">>1000 Dm</option>
+                                                                <option value="4">unknown/ no savings account</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Employment Since">Employment Since</label>
+                                                            <select class="form-control" id="Employment Since" name="Employment Since">
+                                                                <option value="0">0 - 1 years</option>
+                                                                <option value="1">1 - 4 years</option>
+                                                                <option value="2">4 - 7 years</option>
+                                                                <option value="3">>7 years</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Installment Rate">Installment Rate</label>
+                                                            <input type="number" min="1" class="form-control" placeholder="Installment Rate" name="Installment Rate">
+                                                        </div>    
+                                                        <div class="form-group">
+                                                            <label for="Personal Status">Personal Status</label>
+                                                            <select class="form-control" id="Personal Status" name="Personal Status">
+                                                                <option value="0">male: divorced/separated</option>
+                                                                <option value="1">female: divorced/separated/married</option>
+                                                                <option value="2">male: single</option>
+                                                                <option value="3">male: married/widowed</option>
+                                                                <option value="4">female: single</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Other Debtors">Other Debtors</label>
+                                                            <select class="form-control" id="Other Debtors" name="Other Debtors">
+                                                                <option value="0">none</option>
+                                                                <option value="1">co - applicant</option>
+                                                                <option value="2">guarantor</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label for="Residence">Residence Rate</label>
+                                                            <input type="number" min="1" class="form-control" placeholder="Residence" name="Residence">
+                                                        </div> 
+                                                        <div class="form-group">
+                                                            <label for="Property">Property</label>
+                                                            <select class="form-control" id="Property" name="Property">
+                                                                <option value="0">real estate</option>
+                                                                <option value="1">building society savings agreement/
+                                                                    life insurance</option>
+                                                                <option value="2">car or other</option>
+                                                                <option value="3"> unknown / no property</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Age">Age</label>
+                                                            <input type="number" min="1" class="form-control" id="age" name="Age" placeholder="age">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Other Installment Plans">Other Installment Plans</label>
+                                                            <select class="form-control" id="Other Installment Plans" name="Other Installment Plans">
+                                                                <option value="0">Bank</option>
+                                                                <option value="1">Store</option>
+                                                                <option value="2">None</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Housing">Housing</label>
+                                                            <select class="form-control" id="Housing" name="Housing">
+                                                                <option value="0">Rent</option>
+                                                                <option value="1">Own</option>
+                                                                <option value="2">For free</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label for="Existing Credit">Existing Credit</label>
+                                                            <input type="number" min="1" class="form-control" placeholder="Existing Credit" name="Existing Credit">
+                                                        </div> 
+                                                        <div class="form-group">
+                                                            <label for="Job">Job</label>
+                                                            <select class="form-control" id="Job" name="Job">
+                                                                <option value="0">unemployed/ unskilled - non-resident</option>
+                                                                <option value="1">unskilled - resident</option>
+                                                                <option value="2">skilled employee / official</option>
+                                                                <option value="3">management/ self-employed/
+                                                                    highly qualified employee/ officer</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Maintenance">Maintenance</label>
+                                                            <input type="number" min="1" class="form-control" placeholder="Maintenance" name="Maintenance">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Telephone">Telephone</label>
+                                                            <select class="form-control" id="Telephone" name="Telephone">
+                                                                <option value="0">None</option>
+                                                                <option value="1">yes, registered under the customers name</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Foreign Worker">Foreign Worker</label>
+                                                            <select class="form-control" id="Foreign Worker" name="Foreign Worker">
+                                                                <option value="0">Yes</option>
+                                                                <option value="1">No</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- ending -->
+                                            <div class="card-action">
+                                                <button type="submit" class="btn btn-success" value="Submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- isi2 -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="m-0 font-weight-bold text-primary">Hasil Pengukuran jarak</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="card">
+                                                    <div class="card-body text-center"> 
+                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Euclidean</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ euclidean }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="card">
+                                                    <div class="card-body text-center"> 
+                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Canberra</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ canberra }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="card">
+                                                    <div class="card-body text-center"> 
+                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Chebyshev</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ chebyshev }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="card">
+                                                    <div class="card-body text-center"> 
+                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Manhattan</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ manhattan }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="card">
+                                                    <div class="card-body text-center"> 
+                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Minkowski</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ minkowski }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- akhir -->
+                                
+                                <!-- isi 3 -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-title">
+                                                    Hasil Klasifikasi KNN
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-lg-6">
+                                                        <div class="card border-left-primary shadow h-100 py-2">
+                                                            <div class="card-body">
+                                                                <div class="row no-gutters align-items-center">
+                                                                    <div class="col mr-1">
+                                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Hasil</div>
+                                                                        <div class="h5 mb-0 font-weight-bold text-gray-800"> {{prediction}}</div>
+                                                                    </div>
+                                                                </div>  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-6">
+                                                        <div class="card border-left-primary shadow h-100 py-2">
+                                                            <div class="card-body">
+                                                                <div class="row no-gutters align-items-center">
+                                                                    <div class="col mr-1 mt-3 text-center">
+                                                                        <div class="h1 mb-0 font-weight-bold text-gray-800"> {{prediction1}}</div>
+                                                                    </div>
+                                                                </div>  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                <!-- ending -->
+                    </form>
+                                                 
+    {% include 'footer.html' %}

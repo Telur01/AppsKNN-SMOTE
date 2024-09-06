@@ -1,0 +1,322 @@
+{% include 'header.html' %}
+
+        <!--- memanggil sidebar -->
+        {% include 'navbar.html' %}
+
+
+                <!-- Panggil Topbar-->
+                {% include 'sidebar.html'%}
+
+                <div class="main-panel">
+                    <div class="content">
+                        <div class="page-inner">
+
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary">PreProcessing</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/mising.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                  <p class="card-text text-center">Missing Value</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/tf.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                  <p class="card-text text-center">TransFormasi Data</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/minmax.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                  <p class="card-text text-center">Normalisasi Data</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+
+                            
+
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary">SMOTE</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/smote.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                  <p class="card-text text-center">SMOTE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/heatmap.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                  <p class="card-text text-center">Heatmap</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <h3 class="m-0 font-weight-bold text-primary">Pengukuran Jarak Berdasarkan K Terbaik</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary">Euclidean</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/euclidean.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                  <p class="card-text text-center">Confusion Matrix</p>
+                                                  <div class="h5 font-weight-bold text-gray-800">TP : 112</div>
+                                                  <div class="h5 font-weight-bold text-gray-800">TN  : 112</div>
+                                                  <div class="h5 font-weight-bold text-gray-800">FP  : 37</div>
+                                                  <div class="h5 font-weight-bold text-gray-800">FN : 19</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Aeuclidean.png') }}" class="card-img-top" alt="Euclidean">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Euclidean</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Accuracy : 0.80</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Presisi  : 0.75</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Recal    : 0.85</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">F1-Score : 0.80</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">G-mean   : 0.80</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/creuclidean.png') }}" class="card-img-top" alt="Classification">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cross-Validation</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Cross-Validation : 0.77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary">Canberra</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/canberra.png') }}" class="card-img-top" alt="Canberra">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Confusion Matrix</p>
+                                                    <div class="h5 font-weight-bold text-gray-800">TP : 110</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">TN  : 117</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FP  : 32</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FN : 21</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Acanberra.png') }}" class="card-img-top" alt="Canberra">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Canberra</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Accuracy : 0.81</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Presisi  : 0.77</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Recal    : 0.84</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">F1-Score : 0.81</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">G-mean   : 0.81</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/crcanberra.png') }}" class="card-img-top" alt="Classification">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cross-Validation</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Cross-Validation : 0.77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary"> Chebyshev</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/chebyshev.png') }}" class="card-img-top" alt="Chebyshev">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Confusion Matrix</p>
+                                                    <div class="h5 font-weight-bold text-gray-800">TP : 106</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">TN  : 98</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FP  : 51</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FN : 25</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Achebyshev.png') }}" class="card-img-top" alt="Chebyshev">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Chebyshev</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Accuracy : 0.73</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Presisi  : 0.68</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Recal    : 0.81</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">F1-Score : 0.74</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">G-mean   : 0.73</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/crchebyshev.png') }}" class="card-img-top" alt="Classification">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cross-Validation</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Cross-Validation : 0.75</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary"> Manhattan</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Manhattan.png') }}" class="card-img-top" alt="Manhattan">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Confusion Matrix</p>
+                                                    <div class="h5 font-weight-bold text-gray-800">TP : 113</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">TN  : 121</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FP  : 28</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FN : 18</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Amanhattan.png') }}" class="card-img-top" alt="Manhattan">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Manhattan</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Accuracy : 0.84</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Presisi  : 0.80</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Recal    : 0.86</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">F1-Score : 0.83</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">G-mean   : 0.84</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/crmanhattan.png') }}" class="card-img-top" alt="Classification">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cross-Validation</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Cross-Validation : 0.80</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+                            <!-- conten -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="m-0 font-weight-bold text-primary"> Minkowski</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Minkowski.png') }}" class="card-img-top" alt="minkowski">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Confusion Matrix</p>
+                                                    <div class="h5 font-weight-bold text-gray-800">TP : 112</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">TN  : 112</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FP  : 37</div>
+                                                    <div class="h5 font-weight-bold text-gray-800">FN : 19</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/Aminskowksi.png') }}" class="card-img-top" alt="minkowski">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Minkowski</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Accuracy : 0.80</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Presisi  : 0.75</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">Recal    : 0.85</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">F1-Score : 0.80</div>
+                                                    <div class="h4 font-weight-bold text-gray-800">G-mean   : 0.80</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='img/crminkowski.png') }}" class="card-img-top" alt="Classification">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cross-Validation</p>
+                                                    <div class="h4 font-weight-bold text-gray-800">Cross-Validation : 0.77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end conten -->
+
+                        </div>
+                    </div>
+
+    {% include 'footer.html' %}
